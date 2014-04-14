@@ -1,8 +1,8 @@
+#!/bin/bash
 
 echo Please read 16.7 Reducing resource requirements http://jmeter.apache.org/usermanual/best-practices.html
 echo Please read 2.4.3 2.4.7 http://jmeter.apache.org/usermanual/get-started.html
 echo Please read http://jmeter.apache.org/usermanual/jmeter_distributed_testing_step_by_step.pdf
-
 
 ANUMCLIENT=( 100 1000 10000)
 AQOS=(0 1 2)
@@ -10,7 +10,10 @@ ARETAIN=(true false)
 
 JMETERSERVERS=192.168.0.10,192.168.0.11,192.168.0.12,192.168.0.13,192.168.0.14
 
-if [ ! -z "$JMETERSERVERS" ] REMOTE='--remotestart $JMETERSERVERS'; 
+if [ ! -z "$JMETERSERVERS" ]
+then
+    REMOTE='--remotestart $JMETERSERVERS'
+fi 
 
 for NUMCLIENT in ${ANUMCLIENT[*]}
 do

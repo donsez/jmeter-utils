@@ -1,3 +1,4 @@
+#!/bin/bash
 
 ANUMCLIENT=( 100 1000 10000)
 AQOS=(0 1 2)
